@@ -49,7 +49,7 @@
 [[redirects]]
   from = "/vercel/*"
   to = "https://lihbr-demo-functions.vercel.app/api/:splat"
-  status = 303
+  status = 200
   force = true
 
 [[redirects]]
