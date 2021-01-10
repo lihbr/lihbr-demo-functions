@@ -1,11 +1,14 @@
 {
-  "name": "NAME",
+  "name": "lihbr-demo-functions",
   "version": "0.0.0",
-  "description": "DESCRIPTION",
+  "description": "Some random lambda functions demo",
   "private": true,
   "author": "lihbr <hello@lihbr.com> (https://lihbr.com)",
   "license": "SEE LICENSE IN LICENSE",
-  "scripts": {},
+  "scripts": {
+    "dev:netlify": "netlify dev --offline",
+    "dev:vercel": "vercel dev --listen 8888"
+  },
   "engines": {
     "node": ">=10.16.3",
     "yarn": ">=1.13.0"
@@ -17,8 +20,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@commitlint/cli": "8.3.5",
-    "@commitlint/config-conventional": "8.3.4",
-    "husky": "4.2.5"
+    "@commitlint/cli": "11.0.0",
+    "@commitlint/config-conventional": "11.0.0",
+    "husky": "4.3.7"
   }
 }

@@ -1,5 +1,5 @@
-# PROJECT_NAME
+# lihbr-demo-functions
 
 ## About
 
-Project description
+Some random lambda functions demo

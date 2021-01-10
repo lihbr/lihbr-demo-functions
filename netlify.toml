@@ -3,9 +3,9 @@
   # Base directory
   base = ""
   # Build command
-  command = "yarn generate"
+  command = "exit 0"
   # Build directory
-  publish = "dist/"
+  publish = "public/"
   # Serverless Lambda functions
   functions = "functions/"
 
@@ -25,9 +25,7 @@
 
 # Netlify dev config
 [dev]
-  command = "nuxt" # specify command here
-  port = 8888
-  targetPort = 3000
+  publish = "public"
   autoLaunch = false
 
 # Deploy from production branch
@@ -49,10 +47,10 @@
   skip_processing = true
 
 [[redirects]]
-  from = "/api/v1/*"
+  from = "/*"
   to = "/.netlify/functions/:splat"
   status = 200
-  force = true
+  force = false
 
 # [[redirects]]
 #   from = "https://www.example.com/*"
