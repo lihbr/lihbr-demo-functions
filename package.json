@@ -18,7 +18,9 @@
       "commit-msg": "commitlint --env HUSKY_GIT_PARAMS"
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "lambda-rate-limiter": "2.4.35"
+  },
   "devDependencies": {
     "@commitlint/cli": "11.0.0",
     "@commitlint/config-conventional": "11.0.0",
