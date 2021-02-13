@@ -47,19 +47,13 @@
   skip_processing = true
 
 [[redirects]]
-  from = "/vercel/*"
-  to = "https://lihbr-demo-functions.vercel.app/api/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/netlify/*"
+  from = "/*"
   to = "/.netlify/functions/:splat"
   status = 200
   force = true
 
 [[redirects]]
-  from = "https://demo-functions.netlify.app/*"
-  to = "https://demo-functions.lihbr.com/:splat"
+  from = "https://demo-functions.netlify.netlify.app/*"
+  to = "https://demo-functions.netlify.lihbr.com/:splat"
   status = 301
   force = true

@@ -14,7 +14,7 @@ exports.handler = async (event, context) => {
       statusCode: 429,
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
-        status: "429",
+        status: 429,
         msg: "Too Many Requests",
         limit: LIMIT,
         remaining: 0,
@@ -27,7 +27,7 @@ exports.handler = async (event, context) => {
     statusCode: 200,
     headers: { "content-type": "application/json" },
     body: JSON.stringify({
-      status: "200",
+      status: 200,
       msg: "Hello World",
       limit: LIMIT,
       remaining: LIMIT - used,

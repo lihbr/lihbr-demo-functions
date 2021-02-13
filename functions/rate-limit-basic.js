@@ -17,13 +17,13 @@ exports.handler = async (event, context) => {
     return {
       statusCode: 429,
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ status: "429", msg: "Too Many Requests", source })
+      body: JSON.stringify({ status: 429, msg: "Too Many Requests", source })
     };
   }
 
   return {
     statusCode: 200,
     headers: { "content-type": "application/json" },
-    body: JSON.stringify({ status: "200", msg: "Hello World", source })
+    body: JSON.stringify({ status: 200, msg: "Hello World", source })
   };
 };

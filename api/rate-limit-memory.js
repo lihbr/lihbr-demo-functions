@@ -5,13 +5,13 @@ const LIMIT = 5;
 
 const rateLimit = require("lambda-rate-limiter")({ interval: 60 * 1000 }).check;
 
-exports.handler = async (req, res) => {
+module.exports = async (req, res) => {
   let used;
   try {
     used = await rateLimit(LIMIT, req.headers["x-real-ip"]);
   } catch (error) {
     return res.status(429).json({
-      status: "429",
+      status: 429,
       msg: "Too Many Requests",
       limit: LIMIT,
       remaining: 0,
@@ -20,7 +20,7 @@ exports.handler = async (req, res) => {
   }
 
   return res.status(200).json({
-    status: "200",
+    status: 200,
     msg: "Hello World",
     limit: LIMIT,
     remaining: LIMIT - used,

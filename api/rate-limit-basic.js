@@ -10,14 +10,14 @@ const rateLimit = (ip, timeout = 60 * 1000) => {
   history[ip] = Date.now();
 };
 
-exports.handler = async (req, res) => {
+module.exports = async (req, res) => {
   try {
     rateLimit(req.headers["x-real-ip"], 60 * 1000);
   } catch (error) {
     return res
       .status(429)
-      .json({ status: "429", msg: "Too Many Requests", source });
+      .json({ status: 429, msg: "Too Many Requests", source });
   }
 
-  return res.status(200).json({ status: "200", msg: "Hello World", source });
+  return res.status(200).json({ status: 200, msg: "Hello World", source });
 };
